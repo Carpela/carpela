@@ -1,4 +1,149 @@
-%h3 Home
-- @users.each do |user|
-  %p
-    User: #{link_to user.name, user}
+
+/ !!!
+/ %html{:lang => "en"}
+/   %head
+/     %meta{:charset => "utf-8"}/
+/     %title Home - Blanka
+
+%link{:href => "media/styles/main.css", :rel => "stylesheet", :type => "text/css"}/
+%link{:href => "media/styles/nivo-slider.css", :rel => "stylesheet", :type => "text/css"}/
+/[if lte IE 8] <link rel="stylesheet" href="media/styles/ie.css" type="text/css" />
+%script{:src => "media/scripts/jquery-1.6.1.min.js", :type => "text/javascript"}
+%script{:src => "media/scripts/jquery.nivo.slider.pack.js", :type => "text/javascript"}
+%script{:src => "media/scripts/blanka.js", :type => "text/javascript"}
+%body
+  #header
+    .inner.cf
+      / %form.search{:action => "#", :method => "post"}
+      /   %fieldset
+      /     %legend Search
+      /     %input{:name => "search", :type => "text", :value => ""}/
+      /     %input{:alt => "Search", :name => "submit", :src => "media/images/search/button.png", :type => "image"}/
+      / #navigation
+      /   %ul
+      /     %li.current-menu-item
+      /       %a{:href => "index.html"} home
+      /     %li
+      /       %a{:href => "#"} dropdown
+      /       %ul
+      /         %li
+      /           %a{:href => "#"} » menu option one
+      /         %li
+      /           %a{:href => "#"} » menu option two
+      /         %li
+      /           %a{:href => "#"} » menu option three
+      /         %li
+      /           %a{:href => "#"} » menu option four
+      /         %li
+      /           %a{:href => "#"} » menu option five
+      /     %li
+      /       %a{:href => "portfolio.html"} portfolio
+      /     %li
+      /       %a{:href => "blog.html"} blog
+  %hr/
+  #content.home
+    .inner
+      #logo.section.logo
+        %h1
+          %a{:href => "#"}
+            =image_tag("CarpelaLogoTransparentwhitebg.png")
+      /%h2
+      /  %span About Us
+      /.section.about
+      /  %h3 Carpela Consulting
+      /  %p
+      /    Project Management
+      /    = succeed "." do
+      /      %a{:href => "#"} dignissim congue
+      /    Product Management
+      /    = succeed "." do
+      /      %a{:href => "#"} Nunc eu ullamcorper orci
+      /    Quisque eget odio ac lectus vestibulum faucibus eget in metus.
+      /    %a{:href => "#"} In pellentesque
+      /    faucibus vestibulum. Nunc eu ullamcorper orci. Quisque egetNunc eu ullamcorper orci.
+      /%hr/
+      / %h2
+      /   %span Recent Works
+      / .section
+      /   %ol.works-list
+      /     %li.thumb
+      /       .thumb-inner
+      /         %a{:href => "#"}
+      /           %img{:alt => "", :height => "145", :src => "media/images/works/thumb.png", :width => "200"}/
+      /     %li.thumb
+      /       .thumb-inner
+      /         %a{:href => "#"}
+      /           %img{:alt => "", :height => "145", :src => "media/images/works/thumb.png", :width => "200"}/
+      /     %li.thumb
+      /       .thumb-inner
+      /         %a{:href => "#"}
+      /           %img{:alt => "", :height => "145", :src => "media/images/works/thumb.png", :width => "200"}/
+      /     %li.thumb
+      /       .thumb-inner
+      /         %a{:href => "#"}
+      /           %img{:alt => "", :height => "145", :src => "media/images/works/thumb.png", :width => "200"}/
+      / %hr/
+      %h2
+        %span What We Do
+      .section.more
+        .text
+          %h3.with-icon.checkmark
+            %a{:href => "#"} Strategic Advisory
+          %p We provide a fresh approach, working with you to finesse your strategy across a wide range of fields and sectors, from market and pricing analysis and bid advice to improving your technology strategy framework.
+          %a.continue{:href => "#"} read more »
+        .text
+          %h3.with-icon.checkmark
+            %a{:href => "#"} Project Management
+          %p Experts in Agile SCRUM project management, helping you deliver projects faster and more responsively.
+          %a.continue{:href => "#"} read more »
+        .text
+          %h3.with-icon.checkmark
+            %a{:href => "#"} Product Management
+          %p We help you take control of your product lifecycle, from inception through to delivery. We also have a particular specialism in getting troublesome projects back on track.
+          %a.continue{:href => "#"} read more »
+      %hr/
+      / %h2
+      /   %span From Our Blog
+      / .section.blog
+      /   %ol.latest-posts
+      /     %li.post
+      /       .text
+      /         %h3
+      /           %a{:href => "#"} Hand-Drawn Web Free icon set released
+      /         %p Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio.
+      /         %span.meta Posted March 28th at 21:01
+      /     %li.post
+      /       .text
+      /         %h3
+      /           %a{:href => "#"} BeerStat - our first iOS app hits the App Store
+      /         %p Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio.
+      /         %span.meta Posted March 28th at 21:01
+      /     %li.post
+      /       .text
+      /         %h3
+      /           %a{:href => "#"} Less is More WordPress theme available, finally!
+      /         %p Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio.
+      /         %span.meta Posted March 28th at 21:01
+      /   %hr/
+      /   .tweet.text
+      /     %p
+      /       what do you look for in a
+      /       %a{:href => "#"} #wordpress
+      /       theme? either  premium or free. What features do you find the most important?
+      /     %span.meta About 19 hours ago
+      /     %span.follow
+      /       Follow
+      /       %a{:href => "#"} @blankatheme
+      /       on twitter
+  %hr/
+  #footer
+    / .inner
+    /   %p
+    /     %span
+    /       \© 2011 by
+    /       %a{:href => "#"} Blanka
+    /     %span All rights reserved.
+    /     %span
+    /       Designed by
+    /       %a{:href => "http://highonpixels.com"} High on Pixels
+    /       team.
