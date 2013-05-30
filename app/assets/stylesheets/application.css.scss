@@ -28,7 +28,7 @@
 	background-color: #fff;
 }
 .more {
-margin: -20px 0 0 -20px;
+margin: 0px 0 0 0px;
 }
 
 .home .section {
@@ -39,3 +39,8 @@ body,
 #content .tags-list a,
 #content .pagination a:hover,
 #navigation > ul > li > a { color: #888; }
+
+.whatwedo {
+	margin: 0px 20px 20px 20px;
+	text-align: center;
+}
